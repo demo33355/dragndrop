@@ -1,0 +1,64 @@
+:root{
+   --default-font: "Roboto", "Arial", sans-serif;
+   --card-bg: #eee;
+}
+
+div#dragndrop{
+   display:grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-gap: 9em;
+}
+
+.column_one, .column_two{
+   display:flex;
+   gap: 1.5em;
+   flex-direction:column;
+   background-color: rgba(100,100,100,0.3);
+   padding: 3em;
+   border-radius: 3%;
+}
+
+.draggable{
+   cursor:move;
+   background-color: var(--card-bg);
+   border: 0px;
+   display:grid;
+   grid-template-columns: repeat(3, 1fr);
+   filter: drop-shadow(0px 10px 5px rgba(0,0,0,0.1));
+   border-radius: 3%;
+}
+
+.draggable.dragging {
+   border: 3px solid #333;
+}
+.card__header{
+   grid-column:2/4;
+   padding: 2em 2em 0em 2em;
+}
+
+.card__img__container{
+   grid-column:1/2;
+
+}
+.card__text{
+   font-family: var(--default-font);
+   font-size: 1em;
+   margin:0;
+   color: #444;
+}
+
+.card__header__text{
+   font-size: 1.5em;
+   text-transform: uppercase;
+   letter-spacing:0.25em;
+   font-weight: 900;
+   font-family: var(--default-font);
+   margin:0;
+   color: #333;
+}
+img.card__img{
+   width: 5em;
+   height: 5em;
+   border-radius: 50%;
+   padding: 1em;
+}
